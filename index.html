@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body{
+            min-height: 100vh;
+            width: 100wh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: black;
+        }
+
+        #game_board{
+            background-color: #faa499;
+            background-image: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
+            width: 100vmin;
+            height: 100vmin;
+            display: grid;
+            grid-template-rows: repeat(21, 1fr);
+            grid-template-columns: repeat(21, 1fr);
+        }
+
+        .snake{
+            background-color: #ea2027;
+            background-image: linear-gradient(315deg, #ea2027 0%, #ee5a24 74%);
+
+            border: .25vmin solid rgb(255, 255, 255);
+        }
+
+        .food{
+            background-color: #378b29;
+           background-image: linear-gradient(315deg, #378b29 0%, #74d680 74%);
+            border: .25vmin solid rgb(255, 255, 255);
+        
+        }
+
+        #welcome_text{
+        position: absolute; /* Position it on top */
+        top: 5%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center horizontally and vertically */
+        color: white; /* Set text color to white */
+        font-size: 20px; /* Adjust font size */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+    </style>
+    <script src="game.js" defer type="module"></script>
+</head>
+<body>
+    <div id="welcome_text">Snake Game-Gebruik pijltoetsen om de slang te bewegen.</div>
+    <div id = "game_board"></div>
+</body>
+</html>
